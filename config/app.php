@@ -186,6 +186,7 @@ return [
          * Package Service Providers...
          */
         Riskihajar\Terbilang\TerbilangServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -212,6 +213,7 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
         'Terbilang' => Riskihajar\Terbilang\Facades\Terbilang::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ])->toArray(),
 
 ];

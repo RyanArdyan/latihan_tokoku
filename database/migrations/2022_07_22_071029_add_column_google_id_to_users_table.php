@@ -14,8 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('level')->default(0);
-            $table->string('foto')->nullable();
+            $table->string('google_id')->nullable()->after('id');
         });
     }
 
@@ -27,7 +26,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['level', 'foto']);
+            // jatuhkan google_id, migrasi
+            $table->dropColumn('google_id');
         });
     }
 };
